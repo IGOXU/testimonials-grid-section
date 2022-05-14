@@ -1,0 +1,58 @@
+.card-container{
+  display: grid;
+  grid-gap: 1.846rem;
+  justify-content: center;
+}
+
+.card{
+  border-radius: 1rem;
+  box-shadow: .5rem .5rem 1rem rgba(color("light-gray"), .4);
+  color: white;
+  display: grid;
+  padding: 1.846rem;
+  width: 327px;
+
+  &:nth-child(1){
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-position: top right 1.846rem;
+    background-repeat: no-repeat;
+    background-size: 7.846rem;
+  }
+
+  &__header{
+    display: flex;
+    gap: 1rem;
+
+    img{
+      border: 1px solid color("light-grayish");
+      border-radius: 50%;
+      height: 2.462rem;
+    }
+
+    div{
+      @include flex(flex-start);
+      text-align: left;
+
+      h1{font-size: 1rem;}
+      
+      span{font-size: 0.846rem;}
+    }
+  }
+
+  &__body{
+    margin-top: 1.846rem;
+    
+    h2{
+      font-size: 1.59rem;
+      margin-bottom: 1.846rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 1.4rem;
+
+      &::before{ content: '" '; }
+      &::after{ content: ' "'; }
+    }
+  }
+
+}
